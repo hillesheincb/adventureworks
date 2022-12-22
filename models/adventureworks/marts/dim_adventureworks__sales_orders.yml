@@ -2,7 +2,7 @@ version : 2
  
 models:
  
-    - name: dim_adventureworks__sales_order
+    - name: dim_adventureworks__sales_orders
       description: This table contains sales order details.
       columns:
         - name: order_sk
