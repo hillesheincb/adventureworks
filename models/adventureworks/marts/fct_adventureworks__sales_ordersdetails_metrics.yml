@@ -1,0 +1,37 @@
+version: 2
+ 
+models:
+ 
+  - name: fct_adventureworks__sales_ordersdetails_metrics
+    description: The sales order details metrics.
+    columns:
+      - name: order_fk
+        description: Foreign key from dim_adventureworks__sales_orders table.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_adventureworks__sales_orders')
+              field: order_sk
+ 
+      - name: product_fk
+        description: Foreign key from dim_adventureworks__products table.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_adventureworks__products')
+              field: product_sk
+ 
+      - name: salesorder_id
+        description: The sales order code.
+ 
+      - name: specialoffer_id
+        description: The special offer code.
+ 
+      - name: order_qty
+        description: The order quantity.
+ 
+      - name: unit_price
+        description: The product unit price.
+ 
+      - name: order_total_value
+        description: The order total value.

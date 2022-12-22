@@ -1,0 +1,33 @@
+version : 2
+ 
+models:
+ 
+    - name: dim_adventureworks__locations
+      description: This table contains location details.
+      columns:
+        - name: location_sk
+          description: The primary key of the table.
+          tests:
+            - unique
+            - not_null
+ 
+        - name: territory_id
+          description: The territory code.  
+ 
+        - name: countryregion_code
+          description: The country region code.
+ 
+        - name: country_name
+          description: The country name.
+ 
+        - name: stateprovince_id
+          description: The state province code.
+ 
+        - name: stateprovince_name
+          description: The state province name.
+ 
+        - name: address_id
+          description: The address code.
+ 
+        - name: city_name
+          description: The city name.

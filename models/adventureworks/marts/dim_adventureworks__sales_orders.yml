@@ -1,0 +1,30 @@
+version : 2
+ 
+models:
+ 
+    - name: dim_adventureworks__sales_order
+      description: This table contains sales order details.
+      columns:
+        - name: order_sk
+          description: The primary key of the table.
+          tests:
+            - unique
+            - not_null
+ 
+        - name: salesorder_id
+          description: The sales order code.
+ 
+        - name: customer_id
+          description: The customer code.
+ 
+        - name: territory_id
+          description: The territory code.
+ 
+        - name: address_id
+          description: The address code.
+ 
+        - name: credicard_id
+          description: The creditcard code.
+ 
+        - name: card_type
+          description: The creditcard type.
