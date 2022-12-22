@@ -3,7 +3,7 @@ version: 2
 sources:
  
  - name: adventureworks
-   description: Marketing data source, extract by Hevo.
+   description: Adventureworks data source, extract by Stitch.
    schema: adventureworks
    tables:
     - name: person_address
