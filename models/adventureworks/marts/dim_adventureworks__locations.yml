@@ -2,7 +2,7 @@ version : 2
  
 models:
  
-    - name: dim_adventureworks__location
+    - name: dim_adventureworks__locations
       description: This table contains location details.
       columns:
         - name: location_sk
