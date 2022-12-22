@@ -1,0 +1,21 @@
+version : 2
+ 
+models:
+ 
+    - name: dim_adventureworks__customers
+      description: This table contains customers details.
+      columns:
+        - name: customer_sk
+          description: The primary key of the table.
+          tests:
+            - unique
+            - not_null
+ 
+        - name: customer_id
+          description: The customer code.
+ 
+        - name: person_id
+          description: The person code.
+ 
+        - name: person_completename
+          description: The person fullname.

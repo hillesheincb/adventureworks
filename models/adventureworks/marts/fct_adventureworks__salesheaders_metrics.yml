@@ -1,0 +1,42 @@
+version: 2
+ 
+models:
+ 
+  - name: fct_adventureworks__salesheaders_metrics
+    description: The sales headers metrics.
+    columns:
+      - name: order_fk
+        description: Foreign key from dim_adventureworks__sales_orders table.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_adventureworks__sales_orders')
+              field: order_sk
+ 
+      - name: customer_fk
+        description: Foreign key from dim_adventureworks__customers table.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_adventureworks__customers')
+              field: customer_sk
+ 
+      - name: location_fk
+        description: Foreign key from dim_adventureworks__locations table.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_adventureworks_locations')
+              field: location_sk
+ 
+      - name: territory_id
+        description: The territory code.  
+ 
+      - name: address_id
+        description: The address code.
+ 
+      - name: order_date
+        description: The order date.
+ 
+      - name: order_status
+        description: The order status.

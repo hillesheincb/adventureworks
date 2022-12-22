@@ -1,0 +1,233 @@
+version: 2
+ 
+sources:
+ 
+ - name: adventureworks
+   description: Marketing data source, extract by Hevo.
+   schema: adventureworks
+   tables:
+    - name: person_address
+      description: This table contains address details.
+      columns:
+        - name: addressid
+          description: The address code.
+          tests:
+            - not_null
+ 
+        - name: stateprovinceid
+          description: The state province code.
+          tests:
+            - not_null
+ 
+        - name: city
+          description: The city name.
+ 
+    - name: person_businessentityaddress
+      description: This table contains businessentity and adress code.
+      columns:
+        - name: businessentityid
+          description: The business entity code.
+          tests:
+            - not_null
+ 
+        - name: addressid
+          description: The address code.
+          tests:
+            - not_null
+ 
+    - name: person_countryregion
+      description: This table contains country details.
+      columns:
+        - name: countryregioncode
+          description: The country region code.
+ 
+        - name: name
+          description: The country name.
+ 
+    - name: person_person
+      description: This table contains person details.
+      columns:
+        - name: businessentityid
+          description: The business entity code.
+          tests:
+            - not_null
+ 
+        - name: firstname
+          description: The person first name.
+       
+        - name: middlename
+          description: The person middle name.
+ 
+        - name: lastname
+          description: The person last name.
+ 
+    - name: person_stateprovince
+      description: This table contains state province details.
+      columns:
+        - name: stateprovinceid
+          description: The state province code.
+          tests:
+            - not_null
+ 
+        - name: countryregioncode
+          description: The country region code.
+       
+        - name: name
+          description: The state province name.
+ 
+        - name: territoryid
+          description: The territory code.
+          tests:
+            - not_null
+ 
+    - name: production_product
+      description: This table contains details of product production.
+      columns:
+        - name: productid
+          description: The product code.
+          tests:
+            - not_null
+ 
+        - name: name
+          description: The product name.
+ 
+    - name: sales_creditcard
+      description: This table contains credit cards details.
+      columns:
+        - name: creditcardid
+          description: The credit card code.
+          tests:
+            - not_null
+ 
+        - name: cardnumber
+          description: The card number.
+ 
+    - name: sales_customer
+      description: This table contains customer details.
+      columns:
+        - name: customerid
+          description: The customer code.
+          tests:
+            - not_null
+ 
+        - name: personid
+          description: The person code.
+ 
+        - name: territoryid
+          description: The territory code.    
+          tests:
+            - not_null
+ 
+    - name: sales_salesorderdetail
+      description: This table contains order details.
+      columns:
+        - name: salesorderid
+          description: The sales order code.
+          tests:
+            - not_null
+ 
+        - name: specialofferid
+          description: The special offer code.
+          tests:
+            - not_null
+ 
+        - name: orderqty
+          description: The quantity ordered.
+ 
+        - name: productid
+          description: The product code
+          tests:
+            - not_null
+ 
+        - name: unitprice
+          description: The unitprice of product.
+ 
+    - name: sales_salesorderheader
+      description: This table contains delivery, customer and payment order details.
+      columns:
+        - name: salesorderid
+          description: The sales order code.
+          tests:
+            - not_null
+ 
+        - name: orderdate
+          description: The order date.
+ 
+        - name: status
+          description: The order status.
+ 
+        - name: customerid
+          description: The customer code.
+          tests:
+            - not_null
+ 
+        - name: territoryid
+          description: The territory code.
+          tests:
+            - not_null
+ 
+        - name: creditcardid
+          description: The credit card code.
+ 
+        - name: billtoaddressid
+          description: The bill address code.
+          tests:
+            - not_null
+ 
+    - name: sales_salesreason
+      description: This table contains sales reason.
+      columns:
+        - name: salesreasonid
+          description: The sales reason code.
+          tests:
+            - not_null
+ 
+        - name: name
+          description: The sales reason code.
+ 
+    - name: sales_salesterritoryhistory
+      description: This table contains business and territory codes.
+      columns:
+        - name: businessentityid
+          description: The business entity code.
+          tests:
+            - not_null
+ 
+        - name: territoryid
+          description: The territory code.
+          tests:
+            - not_null
+ 
+    - name: sales_salesorderheadersalesreason
+      description: This table contains more details of sales reason.
+      columns:
+        - name: salesorderid
+          description: The sales order code.
+          tests:
+            - not_null
+ 
+        - name: salesreasonid
+          description: The sales reason id.
+          tests:
+            - not_null
+ 
+    - name: sales_specialofferproduct
+      description: This table contains offer products details.
+      columns:
+        - name: specialofferid
+          description: The special offer code.
+          tests:
+            - not_null
+ 
+        - name: productid
+          description: The product code.
+          tests:
+            - not_null
+ 
+    - name: production_productproductphoto
+      description: This table contains product photo and product code.
+      columns:
+        - name: productid
+          description: The product code.
+          tests:
+            - not_null

@@ -1,0 +1,18 @@
+version : 2
+ 
+models:
+ 
+    - name: dim_adventureworks__products
+      description: This table contains product details.
+      columns:
+        - name: product_sk
+          description: The primary key of the table.
+          tests:
+            - unique
+            - not_null
+ 
+        - name: product_id
+          description: The product code.  
+ 
+        - name: product_name
+          description: The product name.
